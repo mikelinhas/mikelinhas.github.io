@@ -9,7 +9,7 @@ highlighter:      pygments
 title:            Miguel Zarco
 #tagline:          'A Jekyll theme'
 subtitle:         Developing software for the 4.0 industry
-description:      I'm a software developer constantly searching for new technologies. My personal favorites, and those which I use in most of my projects are NodeJS, MongoDB, VueJS, and ReactJS. I have used Python frameworks such as Django and Flask, and really like building apps inside containers with Docker. My current approach is trying to go serverless, collecting data with AWS Lambda, IoT Core, and DynamoDB. <br> Take a look at my blog posts for some of my public projects.
+full_description:      I'm a software developer constantly searching for new technologies. My personal favorites, and those which I use in most of my projects are NodeJS, MongoDB, VueJS, and ReactJS. I have used Python frameworks such as Django and Flask, and really like building apps inside containers with Docker. My current approach is trying to go serverless, collecting data with AWS Lambda, IoT Core, and DynamoDB. <br> Take a look at my blog posts for some of my public projects.
 
 url:              #http://hyde.getpoole.com
 baseurl:          /
