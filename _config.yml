@@ -11,13 +11,10 @@ title:            Miguel Zarco
 subtitle:         Developing software for the 4.0 industry
 full_description:      I'm a software developer constantly searching for new technologies. My personal favorites, and those which I use in most of my projects are NodeJS, MongoDB, VueJS, and ReactJS. I have used Python frameworks such as Django and Flask, and really like building apps inside containers with Docker. My current approach is trying to go serverless, collecting data with AWS Lambda, IoT Core, and DynamoDB. <br> Take a look at my blog posts for some of my public projects.
 
-url:              #http://hyde.getpoole.com
+url:              http://mikelinhas.github.io
 baseurl:          /
 
 paginate:         5
 
-# Custom vars
-#version:          2.1.0
-
-#github:
-#  repo:           https://github.com/poole/hyde
+github:
+  repo:           https://github.com/mikelinhas
