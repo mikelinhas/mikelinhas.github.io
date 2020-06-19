@@ -1,5 +1,4 @@
 # Dependencies
-markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
@@ -14,9 +13,9 @@ full_description:      I'm a software developer constantly searching for new tec
 url:              https://mikelinhas.github.io
 baseurl:          /
 
-paginate:         5
 
 github:
   repo:           https://github.com/mikelinhas
 
 linkedin:         https://linkedin.com/in/miguelzarco
+
