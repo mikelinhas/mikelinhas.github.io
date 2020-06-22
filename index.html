@@ -7,12 +7,16 @@ title: Home
 
 {% include tech-stack.html %}
 
-
 <div class="post-list-container">
-  <h3>My most recent projects:</h3>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li><a href="{{post.url}}">{{post.title}}</a></li>
+  <h3 style="margin-bottom: 20px">Recent projects</h3>
+  <ul class="related-posts">
+    {% for post in site.posts limit:10 %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+          <small>{{ post.date | date_to_string }}</small>
+        </a>
+      </li>
     {% endfor %}
   </ul>
 </div>

@@ -1,6 +1,6 @@
 .center {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 .center-div {
@@ -9,28 +9,31 @@
 }
 
 .tech-stack {
-  width: 100%;
-  text-align: center; 
+	width: 100%;
+	text-align: center; 
 }
 
 @media (max-width: 58em) {
 	.tech-logo {
-	  height: 30px;
-	  display: inline-block; 
-	  margin: 20px;
+		height: 30px;
+		display: inline-block; 
+		margin: 20px;
 	}​
 }
 
 @media (min-width: 58em) {
 	.tech-logo {
-	  height: 50px;
-	  display: inline-block; 
-	  margin: 20px;
+		height: 50px;
+		display: inline-block; 
+		margin: 20px;
 	}​
 }
 
 .post-list-container {
-	margin-top: 50px;
+	margin-top: 30px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-top: 1px solid #eee
 }
 
 .post-list {

@@ -7,7 +7,9 @@ In 2018 I decided to help out some friends who were starting to grow their fashi
 
 **VueJS** was becoming extremely popular and after testing it with some small ideas, it seemed like a good choice. The MRP was going to include complex calls to the database, so I decided to use **MongoDB** and **NodeJS**. 
 
-<div class="center-div" style="max-width: 500px">
+<p class="center" style="margin-top: 60px"> The basic outline of the project was decided. </p>
+
+<div class="center-div" style="max-width: 500px; margin-top: 20px;">
 	<img src="/assets/images/MEVNstack.png" alt="MEVN Stack">
 </div>
 
