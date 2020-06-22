@@ -39,3 +39,9 @@
 .post-list {
 	margin-top: 20px;
 }
+
+h5 {
+  text-decoration: italic;
+  margin-top: 50px;
+  margin-left: 20px;
+}
