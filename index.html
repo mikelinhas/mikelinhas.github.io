@@ -8,19 +8,12 @@ title: Home
 {% include tech-stack.html %}
 
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+<div class="post-list-container">
+  <h3>My most recent projects:</h3>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li><a href="{{post.url}}">{{post.title}}</a></li>
+    {% endfor %}
+  </ul>
 </div>
 

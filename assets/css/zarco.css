@@ -3,13 +3,36 @@
   text-align: center;
 }
 
+.center-div {
+	width: 90%;
+	margin: auto;
+}
+
 .tech-stack {
   width: 100%;
   text-align: center; 
 }
 
-.tech-logo {
-  height: 50px;
-  display: inline-block; 
-  margin: 20px;
-}​
+@media (max-width: 58em) {
+	.tech-logo {
+	  height: 30px;
+	  display: inline-block; 
+	  margin: 20px;
+	}​
+}
+
+@media (min-width: 58em) {
+	.tech-logo {
+	  height: 50px;
+	  display: inline-block; 
+	  margin: 20px;
+	}​
+}
+
+.post-list-container {
+	margin-top: 50px;
+}
+
+.post-list {
+	margin-top: 20px;
+}
