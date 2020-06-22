@@ -1,27 +1,15 @@
 ---
 layout: post
-title: Fashion MRP
-description: MRP Webapp built with Vuejs, ExpressJS, NodeJS, and MongoDB
-techstack: [JavaScript, VueJS, ExpressJS, NodeJS, MongoDB]
+title: Financial Statement Portfolio Webapp
+description: Saving financials in an organized manner to track stock price, income statements, etc.
+techstack: [Python, Django, Javascript, ReactJS, PostgreSQL]
 ---
 
 <hr />
 
 ## Introduction
 
-In 2018 I decided to help out some friends who were starting to grow their fashion business. Their sales and production had really taken off and they needed to track their warehouses, production and supplier purchases. At this point in time, companies nedd to decide either to build or to buy an MRP. Thankfully for me, they decided to build.
 
-**VueJS** was becoming extremely popular and after testing it with some small ideas, it seemed like a good choice. The MRP was going to include complex calls to the database, so I decided to use **MongoDB** and **NodeJS**. 
-
-<p class="center" style="margin-top: 60px"> The basic outline of the project was decided. </p>
-
-<div class="center-div" style="max-width: 500px; margin-top: 20px;">
-	<img src="/assets/images/MEVNstack.png" alt="MEVN Stack">
-</div>
-
-  > The REST server API was built using **ExpressJS**, creating what is know as the **MEVN** stack (Mongodb, ExpressJS, VueJS, NodeJS).
-
- <hr />
 
 ## Project Outline
 

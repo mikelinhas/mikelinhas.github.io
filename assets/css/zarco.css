@@ -8,6 +8,18 @@
 	margin: auto;
 }
 
+.post-tech-stack {
+	list-style-type: none;
+}
+
+.post-tech-stack li {
+	padding: 3px 12px;
+	border-radius: 2px;
+	margin-right: 3px;
+	background: #e8e8e8;
+	display: inline-block;
+}
+
 .tech-stack {
 	width: 100%;
 	text-align: center; 

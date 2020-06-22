@@ -9,15 +9,25 @@ title: Home
 
 <div class="post-list-container">
   <h3 style="margin-bottom: 20px">Recent projects</h3>
-  <ul class="related-posts">
+    
     {% for post in site.posts limit:10 %}
-      <li>
+
+      <div class="related-posts">
         <a href="{{ post.url }}">
           {{ post.title }}
           <small>{{ post.date | date_to_string }}</small>
         </a>
-      </li>
+
+        <p>{{post.description}}</p>
+
+        <ul class="post-tech-stack">
+          {% for tech in post.techstack %}
+          <li>{{tech}}</li>
+          {% endfor %}
+        </ul>
+
+      </div>
+      
     {% endfor %}
-  </ul>
 </div>
 

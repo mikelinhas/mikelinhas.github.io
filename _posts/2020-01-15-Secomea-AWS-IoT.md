@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Fashion MRP
-description: MRP Webapp built with Vuejs, ExpressJS, NodeJS, and MongoDB
-techstack: [JavaScript, VueJS, ExpressJS, NodeJS, MongoDB]
+title: Secomea + AWS IoT
+description: Collecting process data from PLCs and storing it in AWS DynamoDB.
+techstack: [Java, AWS IoT, AWS Lambda, DynamoDB]
 ---
 
 <hr />
