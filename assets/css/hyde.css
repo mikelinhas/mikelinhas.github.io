@@ -70,6 +70,7 @@ html {
   }
 }
 
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;
@@ -82,6 +83,20 @@ html {
   font-family: "Abril Fatface", serif;
   font-size: 3.25rem;
 }
+
+@media (max-width: 48em) {
+  h1.xs {
+    font-size: 2rem;
+  }
+  .hide-xs {
+    display:none;
+  }
+  .sidebar-xs a.sidebar-nav-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
 
 /* Sidebar nav */
 .sidebar-nav {
