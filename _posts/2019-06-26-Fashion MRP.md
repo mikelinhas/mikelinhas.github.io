@@ -5,7 +5,7 @@ description: MRP Webapp built with Vuejs, ExpressJS, NodeJS, and MongoDB
 techstack: [JavaScript, VueJS, ExpressJS, NodeJS, MongoDB]
 ---
 
-<hr />
+---
 
 ## Introduction
 
@@ -21,7 +21,7 @@ In 2018 I decided to help out a start-up which was starting to grow their fashio
 
   > The REST server API was built using **ExpressJS**, creating what is know as the **MEVN** stack (Mongodb, ExpressJS, VueJS, NodeJS).
 
- <hr />
+ ---
 
 ## Project Outline
 
@@ -51,15 +51,113 @@ With a simple glance, the user can see how many products are in stock and how ma
 
 ##### Bill of Materials
 
-With a simple glance, the user can see how many products are in stock and how many are ordered to be produced. The "ordered" column, shows a call to the database which adds up all the production orders which include that product.
+When making each finished product, it is very important to track how much material is used. Creating a `bill of materials` helps the user define and adjust the amount of material that will be removed from the database each time a product is manufactured.
 
 <div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/stock-example.png" alt="Stock example">
+	<img src="/assets/examples/bom-example.png" alt="Bom example">
 </div>
 
-<hr />
+
+##### Materials
+
+The `materials` are bought from the `suppliers` and stored at the `producers` facilities. Taking into account the amount of `materials`, the `production orders` and the `purchase order` it is easy to see if there is enough material stock for the near future.
+
+From a producer's point of view, the user can see how much material they have, and how much they will need for production.
+
+<div class="center-div" style="margin-top: 20px;">
+	<img src="/assets/examples/material-producer-example.png" alt="Material producer example">
+</div>
+
+From a supplier's point of view, the user can see how much material they have at each producer facility, and how much they will need to order.
+
+<div class="center-div" style="margin-top: 20px;">
+	<img src="/assets/examples/material-supplier-example.png" alt="Material supplier example">
+</div>
+
+---
 
 ### NodeJS + ExpressJS: Sessions and API
 
-<hr />
+Keeping track of user's sessions, privileges and roles was done using **express-session** and **MongoDB** and **passport**.
+
+```javascript
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+// User's passwords are hashed when created and verified
+const passwordHash = require('password-hash');
+```
+
+Each time a user calls an API endpoint, NodeJS checks to see if the user's cookie is valid, and wether the user has a specific role for the app. For example, deleting something from the database can only be done for a user with administrator priviledges.
+
+
+---
+
 ### NodeJS + MongoDB: Database 
+
+The database is split into Xx main collections:
+
+* `materials`: Material info and stock
+* `products`: Product info and stock
+* `boms`: Bill of materials relating products and materials
+* `suppliers`: Supplier information.
+* `purchasing`: Purchase orders to suppliers.
+* `producers`: Producer information.
+* `production`: Production orders to producers.
+
+Every item in these collections has a unique `_id` which is used to relate information from one to collection to another. 
+
+For example, controling the `material` stock in each `producer` facility is done:
+
+```javascript
+//material Collection
+{
+	"_id" : "MATERIAL-1-id",
+	"name" : "Material 1",
+	"stock" : [
+		{"producer_id": "PRODUCER-1-id",
+		 "stock": 3},
+		{"producer_id": "PRODUCER-2-id",
+		"stock": 5}
+	],
+	"supplier_id" : "SUPPLIER-1-id",
+	...
+}
+
+//suppliers Collection
+{
+	"_id": "SUPPLIER-1-id"
+	...
+}
+
+//producers Collection
+{
+	"_id": "PRODUCER-1-id"
+	...
+}
+```
+
+An example of a Bill Of Material would be:
+
+```javascript
+//boms collection
+{
+	"_id" : "BOM-x-id",
+	"product_id" : "PRODUCT-1-id",
+	"materials" : [
+		{"material_id": "MATERIAL-1-id"
+		 "supplier_id" : "SUPPLIER-1-id",
+		 "quantity" : 4},
+		{"material_id": "MATERIAL-2-id",
+		 "supplier_id" : "SUPPLIER-1-id",
+		 "quantity" : 0.2}
+	],
+	...
+}
+```
+
+
+
+

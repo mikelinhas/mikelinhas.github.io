@@ -2,52 +2,39 @@
 layout: post
 title: Secomea + AWS IoT
 description: Collecting process data from PLCs and storing it in AWS DynamoDB.
-techstack: [Java, AWS IoT, AWS Lambda, DynamoDB]
+techstack: [JavaScript, AWS IoT, AWS Lambda, DynamoDB, NodeJS]
 ---
 
-<hr />
+---
 
 ## Introduction
 
 
 
+<p class="center" style="margin-top: 60px"> Collection of data was done with the following structure. </p>
+
+<div class="center-div" style="max-width: 500px; margin-top: 20px;">
+	<img src="/assets/images/AWS-IoT.png" alt="AWS IoT">
+</div>
+
+
+---
+
 ## Project Outline
 
-### VueJS Frontend
-
-The user interface had to be as simple as possible. Any requirement from the company was considered and developed. 
-
-The main functionality from the client's point of view was:
-
-* Control the `finished products` stock
-* Control the `production orders` made to the `producers`
-* Control the `materials` stock
-* Control the `purchase orders` made to the `suppliers`
-
-The final approach that tied everything in was:
-
-* Creating a `bill of materials` for each `finished product`
-
-##### Finished products
-
-With a simple glance, the user can see how many products are in stock and how many are ordered to be produced. The "ordered" column, shows a call to the database which adds up all the production orders which include that product.
-
-<div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/stock-example.png" alt="Stock example">
-</div>
+### Secomea - Data Collection Module
 
 
-##### Bill of Materials
+---
 
-With a simple glance, the user can see how many products are in stock and how many are ordered to be produced. The "ordered" column, shows a call to the database which adds up all the production orders which include that product.
+### AWS IoT Core - Data Streaming
 
-<div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/stock-example.png" alt="Stock example">
-</div>
+---
 
-<hr />
+### AWS Lambda
 
-### NodeJS + ExpressJS: Sessions and API
+##### Saving to DynamoDB
 
-<hr />
-### NodeJS + MongoDB: Database 
+##### IAM Role Configuration
+
+

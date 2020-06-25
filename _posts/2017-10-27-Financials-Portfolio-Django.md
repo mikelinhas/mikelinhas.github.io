@@ -5,7 +5,7 @@ description: Monitoring financials in an organized manner to track stock price, 
 techstack: [Python, Django, Javascript, ReactJS, PostgreSQL]
 ---
 
-<hr />
+---
 
 ## Introduction
 
@@ -22,7 +22,7 @@ I developed the financials portfolio app in 2017, as a means for my colleagues t
   > The Django Framework would include its own database in **PostgreSQL** and would also act as a REST server to access an **external API** for the frontend.
 
 
-<hr />
+---
 
 
 ## Project Outline
@@ -48,7 +48,7 @@ Each company page would then take you to the API data. Where `financial statemen
 </div>
 
 
-<hr />
+---
 
 ### Django - PostgreSQL and Admin Page
 
@@ -60,12 +60,12 @@ The database only needed to include a list of `companies` with their `api_symbol
 	<img src="/assets/examples/admin-site.png" alt="admin site example">
 </div>
 
-<hr />
+---
 
 ### Django - External API
 
 Once the front-end had the company information, it would then make an HTTP call to Django, asking for different financial information. Django would make the call to the external API, filter the necessary information from the call, and respond to the frontend.
 
-<div class="center-div" style="margin-top: 20px;">
+<div class="center-div" style="max-width: 500px; margin-top: 20px;">
 	<img src="/assets/images/DJRstack-rest.png" alt="rest example">
 </div>
