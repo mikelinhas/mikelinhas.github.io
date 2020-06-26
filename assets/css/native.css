@@ -25,7 +25,7 @@
 .highlight .na { color: #bbbbbb } /* Name.Attribute */
 .highlight .nb { color: #24909d } /* Name.Builtin */
 .highlight .nc { color: #447fcf; text-decoration: underline } /* Name.Class */
-.highlight .no { color: #40ffff } /* Name.Constant */
+.highlight .no { color: #bf616a; font-weight: bold; } /* Name.Constant */
 .highlight .nd { color: #ffa500 } /* Name.Decorator */
 .highlight .ne { color: #bbbbbb } /* Name.Exception */
 .highlight .nf { color: #447fcf } /* Name.Function */

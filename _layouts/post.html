@@ -5,6 +5,7 @@ layout: post-layout
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date word-space-xl">{{ page.techstack | array_to_sentence_string: " " }}</span>
   {{ content }}
 </div>
 

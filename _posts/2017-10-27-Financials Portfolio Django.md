@@ -9,7 +9,7 @@ techstack: [Python, Django, Javascript, ReactJS, PostgreSQL]
 
 ## Introduction
 
-I developed the financials portfolio app in 2017, as a means for my colleagues to share knowledge and insights on invertments. The idea was simple. Have an admin page where we can rate the companies and share info.
+I developed the financials portfolio app in 2017, as a means for my colleagues and I to share knowledge and insights on investments. The idea was simple. Have an admin page where we can rate the companies and share info.
 
 **Django** has an integrated database and admin page design which helps you create and manage the app easily, from a user's point of view. On the other hand, Django's template design is far slower than other modern frontend frameworks. Therefore, I decided to develop the front-end with **ReactJS**. 
 
@@ -69,3 +69,10 @@ Once the front-end had the company information, it would then make an HTTP call 
 <div class="center-div" style="max-width: 500px; margin-top: 20px;">
 	<img src="/assets/images/DJRstack-rest.png" alt="rest example">
 </div>
+
+
+ ---
+
+## Live Demo
+
+Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/Heroku.png" alt="Heroku"></a>

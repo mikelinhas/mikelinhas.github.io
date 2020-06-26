@@ -97,15 +97,15 @@ Each time a user calls an API endpoint, NodeJS checks to see if the user's cooki
 
 ### NodeJS + MongoDB: Database 
 
-The database is split into Xx main collections:
+The database is split into 7 main collections:
 
 * `materials`: Material info and stock
 * `products`: Product info and stock
 * `boms`: Bill of materials relating products and materials
 * `suppliers`: Supplier information.
-* `purchasing`: Purchase orders to suppliers.
+* `suppliers.orders`: Purchase orders to suppliers.
 * `producers`: Producer information.
-* `production`: Production orders to producers.
+* `producers.orders`: Production orders to producers.
 
 Every item in these collections has a unique `_id` which is used to relate information from one to collection to another. 
 
@@ -113,29 +113,26 @@ For example, controling the `material` stock in each `producer` facility is done
 
 ```javascript
 //material Collection
-{
-	"_id" : "MATERIAL-1-id",
-	"name" : "Material 1",
-	"stock" : [
-		{"producer_id": "PRODUCER-1-id",
-		 "stock": 3},
-		{"producer_id": "PRODUCER-2-id",
-		"stock": 5}
-	],
-	"supplier_id" : "SUPPLIER-1-id",
-	...
+{"_id" : "MATERIAL-1-id",
+ "name" : "Material 1",
+ "stock" : [
+   {"producer_id": "PRODUCER-1-id",
+    "stock": 3},
+   {"producer_id": "PRODUCER-2-id",
+    "stock": 5}
+ ],
+ "supplier_id" : "SUPPLIER-1-id",
+ ...
 }
 
 //suppliers Collection
-{
-	"_id": "SUPPLIER-1-id"
-	...
+{"_id": "SUPPLIER-1-id"
+ ...
 }
 
 //producers Collection
-{
-	"_id": "PRODUCER-1-id"
-	...
+{"_id": "PRODUCER-1-id"
+ ...
 }
 ```
 
@@ -143,21 +140,26 @@ An example of a Bill Of Material would be:
 
 ```javascript
 //boms collection
-{
-	"_id" : "BOM-x-id",
-	"product_id" : "PRODUCT-1-id",
-	"materials" : [
-		{"material_id": "MATERIAL-1-id"
-		 "supplier_id" : "SUPPLIER-1-id",
-		 "quantity" : 4},
-		{"material_id": "MATERIAL-2-id",
-		 "supplier_id" : "SUPPLIER-1-id",
-		 "quantity" : 0.2}
-	],
-	...
+{"_id" : "BOM-x-id",
+ "product_id" : "PRODUCT-1-id",
+ "materials" : [
+   {"material_id": "MATERIAL-1-id"
+    "supplier_id" : "SUPPLIER-1-id",
+    "quantity" : 4},
+   {"material_id": "MATERIAL-2-id",
+    "supplier_id" : "SUPPLIER-1-id",
+    "quantity" : 0.2}
+  ],
+  ...
 }
 ```
 
+##### MongoDB Aggregation Framework
 
+Most of the **complex queries** to the database are done using the <a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/" target="_blank">Aggregation Pipeline Framework</a>.
 
+ ---
 
+## Live Demo
+
+Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/Heroku.png" alt="Heroku"></a>
