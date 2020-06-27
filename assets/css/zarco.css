@@ -1,4 +1,9 @@
-pre { white-space: pre; overflow: auto; }
+pre { 
+	white-space: pre; 
+	overflow: auto;
+	font-size: 14px;
+}
+
 
 
 .inline-image {
@@ -17,9 +22,20 @@ pre { white-space: pre; overflow: auto; }
 	text-align: center;
 }
 
+
 .center-div {
 	width: 90%;
 	margin: auto;
+}
+
+.center-div img {
+	margin: auto;
+}
+
+.image-subtitle {
+	color: #9a9a9a;
+	font-size: 18px;
+	text-align: center;
 }
 
 .post-tech-stack {

@@ -44,8 +44,9 @@ The final approach that tied everything in was:
 
 With a simple glance, the user can see how many products are in stock and how many are ordered to be produced. The "ordered" column, shows a call to the database which adds up all the production orders which include that product.
 
-<div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/stock-example.png" alt="Stock example">
+<div class="center-div" style="margin-top: 40px; margin-bottom: 70px">
+  <p class="image-subtitle"> Checking and modifying stock </p>
+  <img src="/assets/examples/stock-example.gif" title="Stock example" alt="Stock example">
 </div>
 
 
@@ -53,8 +54,10 @@ With a simple glance, the user can see how many products are in stock and how ma
 
 When making each finished product, it is very important to track how much material is used. Creating a `bill of materials` helps the user define and adjust the amount of material that will be removed from the database each time a product is manufactured.
 
-<div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/bom-example.png" alt="Bom example">
+<div class="center-div" style="margin-top: 40px;">
+  <p class="image-subtitle"> Adding a bill of materials </p>
+  <img src="/assets/examples/bom-example.gif" title="Bom example" alt="Bom example">
+
 </div>
 
 
@@ -162,4 +165,4 @@ Most of the **complex queries** to the database are done using the <a href="http
 
 ## Live Demo
 
-Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/Heroku.png" alt="Heroku"></a>
+Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>

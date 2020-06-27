@@ -75,4 +75,4 @@ Once the front-end had the company information, it would then make an HTTP call 
 
 ## Live Demo
 
-Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/Heroku.png" alt="Heroku"></a>
+Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>
