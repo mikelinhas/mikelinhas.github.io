@@ -11,7 +11,7 @@ techstack: [JavaScript, AWS-IoT, AWS-Lambda, DynamoDB, NodeJS]
 
 This project started as a way to securely connect to all our devices installed in each of our customer's production centers. In many of them, SECOMEA was becoming a standard entry point due to its ease of use and installation. The VPN would connect through SECOMEA and  access the process PLC network.
 
-Additionally, SECOMEA includes a Data Collection Module which bundles up the data from the PLC devices and publishes them to your IoT service of choice, basically becoming an **IoT Gateway**. This feature lead to a small data collection project in AWS.
+Additionally, SECOMEA includes a Data Collection Module which bundles up the data from the PLC devices and publishes them to your IoT service of choice, basically becoming an **IoT Gateway**. This feature led to a small data collection project in AWS.
 
 <p class="center" style="margin-top: 60px"> The main structure of the project was </p>
 

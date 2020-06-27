@@ -65,16 +65,18 @@ When making each finished product, it is very important to track how much materi
 
 The `materials` are bought from the `suppliers` and stored at the `producers` facilities. Taking into account the amount of `materials`, the `production orders` and the `purchase order` it is easy to see if there is enough material stock for the near future.
 
-From a producer's point of view, the user can see how much material they have, and how much they will need for production.
+From a producer's point of view, the user can see how much material they have, and how much they will need for production. 
 
 <div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/material-producer-example.png" alt="Material producer example">
+  <p class="image-subtitle"> Checking materials in stock at a Producer's warehouse </p>
+	<img src="/assets/examples/producer-stock.gif" title="Producer stock" alt="Producer stock">
 </div>
 
 From a supplier's point of view, the user can see how much material they have at each producer facility, and how much they will need to order.
 
 <div class="center-div" style="margin-top: 20px;">
-	<img src="/assets/examples/material-supplier-example.png" alt="Material supplier example">
+  <p class="image-subtitle"> Checking supplier materials in stock  </p>
+  <img src="/assets/examples/supplier-stock.gif" title="Supplier stock" alt="Supplier stock">
 </div>
 
 ---
