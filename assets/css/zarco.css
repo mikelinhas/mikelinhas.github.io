@@ -4,7 +4,23 @@ pre {
 	font-size: 14px;
 }
 
+@media (max-width: 58em) {
+	.modebar {
+		margin-right: 200px !important;
+	}
+}
 
+@media (max-width: 58em) {
+	.big-xs {
+		width: 130%;
+	}​
+}
+
+@media (max-width: 58em) {
+	g.legend {
+		display: none;
+	}
+}
 
 .inline-image {
 	max-width: 100px; 

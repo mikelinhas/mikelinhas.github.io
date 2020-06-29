@@ -5,4 +5,6 @@ title: About
 
 # About Me
 
-I'm a software developer constantly searching for new technologies. My personal favorites, and those which I use in most of my projects are NodeJS, MongoDB, VueJS, and ReactJS. I have used Python frameworks such as Django and Flask, and really like building apps inside containers with Docker. My current approach is trying to go serverless, collecting data with AWS Lambda, IoT Core, and DynamoDB.
+I started developing software back in 2014 after I graduated from my Industrial Engineering degree. My first learning curve was with MongoDB, NodeJS and AngularJS. I developed a small scale production MRP for a packaging company.
+
+Since then I have kept on searching and leaning new technologies. I am always willing to take up new and exciting projects. 

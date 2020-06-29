@@ -25,7 +25,53 @@ Additionally, SECOMEA includes a Data Collection Module which bundles up the dat
 ## Project Outline
 
 ### Secomea - Data Collection Module
+The Secomea Site Manager can be integrated with a Module called Data Collection Module to retrieve and emit data from the running PLCs. This is done by configuring `COLLECTORS` (PLCs) and `DATA SERVERS` (AWS IoT).
 
+To establish a PLC as a `COLLECTOR` we need to determine how to communicate with it and what data we are going to retrieve from it. An example configuration would be by using the proprietory Siemens TCP protocol as seen below. In this step we also configure the data which we are going to read.
+
+```json
+"Collectors": [
+ {"CollectorName": "PLC",
+  "Protocol": "S7/TCP",
+  "S7Access": {
+    "S7Model": "S7-1200",
+    "S7Rack": 0,
+    "S7Slot": 1
+   },
+   "SamplePoints": [
+    {"SampleName": "VARIABLE-1",
+     "SampleDataType": "bool",
+     ...},
+    {"SampleName": "VARIABLE-2",
+     "SampleDataType": "integer",
+     ...}
+   ]
+  }
+]
+```
+
+<div style="height: 50px"></div>
+
+To establish a AWS as a `DATA SERVER` we need to configure the protocol and save the Certificate Key, Private Key, and RootCA where the SECOMEA gateway can find it. An example configuration would be as seen below:
+
+
+```json
+"DataServers" : [
+  {"DatasrvName": "AWS",
+   "DatasrvProtocol": "“MQTT/AWS", 
+   "IOPin": true,
+   "MQTTAWSParams": {
+      "BrokerAddr": "xxxx-ats.iot.eu-west-3.amazonaws.com",
+      "BrokerPort": 8883, 
+      "RootCA": "AmazonRootCA1.pem", 
+      "DeviceCert": "ca2afb96f3-certificate", 
+      "DevicePrivKey": "ca2afb96f3-private",
+      "PublishInterval": 20,
+      ...
+    }
+  }
+ ] 
+```
 
 ---
 

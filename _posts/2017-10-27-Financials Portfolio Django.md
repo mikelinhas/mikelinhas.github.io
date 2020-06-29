@@ -81,4 +81,4 @@ Once the front-end had the company information, it would then make an HTTP call 
 
 Checkout the live demo at <a href="#"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>
 
-*Update: the live demo is not working since the subscription has ended.*
+*Update: the live demo is not working since the API subscription has ended.*
