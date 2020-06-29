@@ -16,7 +16,7 @@ Additionally, SECOMEA includes a Data Collection Module which bundles up the dat
 <p class="center" style="margin-top: 60px"> The main structure of the project was </p>
 
 <div class="center-div" style="max-width: 500px; margin-top: 20px;">
-	<img src="/assets/images/AWS-IoT.png" alt="AWS IoT">
+	<img src="/assets/images/AWS-IoT.png" title="AWS IoT" alt="AWS IoT">
 </div>
 
 
@@ -35,8 +35,9 @@ Additionally, SECOMEA includes a Data Collection Module which bundles up the dat
 
 The first step to read data coming from the Data Collection Module is to **resgister a thing** in the AWS IoT Core service. By doing this, AWS will give the thing an Amazon Resource Name - `arn` - which will be needed further on.
 
-<div class="center-div" style="max-width: 700px; margin-top: 20px;">
-	<img src="/assets/examples/secomea-thing.png" alt="IoT Secomea Thing">
+<div class="center-div" style="max-width: 700px; margin-top: 40px; margin-bottom:70px;">
+  <p class="image-subtitle"> Adding a thing in AWS IoT </p>
+	<img src="/assets/examples/secomea-thing.png" title="IoT Secomea Thing" alt="IoT Secomea Thing">
 </div>
 
 
@@ -44,8 +45,9 @@ The first step to read data coming from the Data Collection Module is to **resgi
 
 Before we head on to configure the lambda triggers, we will test to see if the SECOMEA device is publishing the data correctly. To do so, AWS gives us a useful "Test" tool where we can **subscribe** to the SECOMEA stream.
 
-<div class="center-div" style="max-width: 700px; margin-top: 20px;">
-	<img src="/assets/examples/secomea-test.png" alt="IoT Secomea Test">
+<div class="center-div" style="max-width: 700px; margin-top: 40px; margin-bottom:50px;">
+  <p class="image-subtitle"> Configuring IoT test</p>
+	<img src="/assets/examples/secomea-test.png" title="IoT Secomea Test" alt="IoT Secomea Test">
 </div>
 
 <br />
@@ -53,8 +55,9 @@ Before we head on to configure the lambda triggers, we will test to see if the S
 By doing this, we are now listening to the SECOMEA topic stream. As soon as the SECOMEA device publishes on that topic, it will appear in the interface.
 
 
-<div class="center-div" style="max-width: 500px; margin-top: 20px;">
-	<img src="/assets/examples/secomea-topic-test.png" alt="IoT Secomea Topic Test">
+<div class="center-div" style="max-width: 500px; margin-top: 40px; margin-bottom:70px;">
+  <p class="image-subtitle"> Testing SECOMEA device</p>
+	<img src="/assets/examples/secomea-topic-test.png" title="IoT Secomea Topic" alt="IoT Secomea Topic Test">
 </div>
 
 
@@ -62,8 +65,9 @@ By doing this, we are now listening to the SECOMEA topic stream. As soon as the 
 
 Now we are ready to create an **action**. When doing this we will create a simple lambda function called `writeToDynamoDB`, which we will modify later on.
 
-<div class="center-div" style="max-width: 700px; margin-top: 20px;">
-	<img src="/assets/examples/secomea-action.png" alt="IoT Secomea Action">
+<div class="center-div" style="max-width: 700px; margin-top: 40px; margin-bottom:70px;">
+  <p class="image-subtitle"> Configuring IoT action</p>
+	<img src="/assets/examples/secomea-action.png" title="IoT Secomea Action" alt="IoT Secomea Action">
 </div>
 
 ---
@@ -94,8 +98,9 @@ We will name this the `LambdaDynamoDB` role and apply it to the Lambda Function.
 
 The trigger was created after creating the **action** in the IoT Core service. Inside the Lambda function it looks like this:
 
-<div class="center-div" style="max-width: 700px; margin-top: 20px;">
-	<img src="/assets/examples/lambda-trigger.png" alt="Lambda IoT Trigger">
+<div class="center-div" style="max-width: 700px; margin-top: 40px; margin-bottom: 70px;">
+  <p class="image-subtitle"> Lambda trigger visualization</p>
+	<img src="/assets/examples/lambda-trigger.png" title="Lambda IoT Trigger" alt="Lambda IoT Trigger">
 </div>
 
 
@@ -132,7 +137,7 @@ exports.handler = async (event, context) => {
 
 ---
 
-There it is, Industry 4.0 IIoT! 
+There it is, industrial PLCs connecting over AWS IoT to a NoSQL database! 
 
 
 

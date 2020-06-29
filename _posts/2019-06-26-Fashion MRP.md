@@ -161,10 +161,10 @@ An example of a Bill Of Material would be:
 
 ##### MongoDB Aggregation Framework
 
-Most of the **complex queries** to the database are done using the <a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/" target="_blank">Aggregation Pipeline Framework</a>.
+Most of the **complex queries** to the database are done using the <a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/" target="_blank">Aggregation Pipeline Framework</a>, which is much faster than running javascript functions inside NodeJS.
 
  ---
 
 ## Live Demo
 
-Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>
+Checkout the live demo at <a href="https://fashionmrpexample.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>
