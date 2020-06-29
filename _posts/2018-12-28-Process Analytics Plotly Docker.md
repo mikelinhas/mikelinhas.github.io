@@ -47,7 +47,8 @@ var app = new Vue({
 Users needed to select which CSV they wanted to chart, and which variables they wanted to see. The color and line type could also be configured in this step.
 
 <div class="center-div" style="max-width: 700px; margin-top: 20px;">
-	<img src="/assets/examples/csv-read-example.png" alt="CSV Read Example">
+  <p class="image-subtitle"> Selecting data to graph</p>
+	<img src="/assets/examples/graph-example-select.gif" alt="CSV Read Example">
 </div>
 
 ---
@@ -78,16 +79,6 @@ def plot():
 	return render_template("plot.html", graph=graph)
 
 ```
-
-
-<br />
-
-<p class="center" style="margin-top: 60px"> An example of the graph: </p>
-
-
-<div class="center-div" style="max-width: 900px; margin-top: 20px;">
-	<img src="/assets/examples/graph-example.png" alt="Geaph example">
-</div>
 
 
 ---
@@ -126,9 +117,9 @@ docker run -p 5000:5000 -v /path/to/csv_folder:/app/csv_folder app
 
 ---
 
-## Example Demo
+## Example Graph
 
-Checkout the live demo at <a href="http://graphup.herokuapp.com/" target="_blank"><img class="inline-image" src="/assets/Heroku.png" alt="Heroku"></a>
+{% include temp_graph.html %}
 
 
 
