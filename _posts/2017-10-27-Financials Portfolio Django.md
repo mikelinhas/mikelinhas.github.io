@@ -60,7 +60,7 @@ The database only needed to include a list of `companies` with their `api_symbol
 
  <div class="center-div" style="max-width: 600px; margin-top: 40px; margin-bottom: 40px">
   <p class="image-subtitle"> Adding companies to the database</p>
-  <img src="/assets/examples/admin-site.png" alt="admin site example">
+  <img src="/assets/examples/admin-site-example.png" alt="admin site example">
 </div>
 
 ---
