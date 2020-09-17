@@ -73,12 +73,3 @@ Once the front-end had the company information, it would then make an HTTP call 
   <p class="image-subtitle"> API call example</p>
   <img src="/assets/images/DJRstack-rest.png" alt="rest example">
 </div>
-
-
- ---
-
-## Live Demo
-
-Checkout the live demo at <a href="#"><img class="inline-image" src="/assets/heroku.png" alt="Heroku"></a>
-
-*Update: the live demo is not working since the API subscription has ended.*
